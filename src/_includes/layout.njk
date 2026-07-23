@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.seo.title }}</title>
+  <meta name="description" content="{{ site.seo.description }}">
+  <link rel="canonical" href="{{ site.seo.siteUrl }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ site.seo.title }}">
+  <meta property="og:description" content="{{ site.seo.description }}">
+  <meta property="og:image" content="{{ site.seo.siteUrl }}{{ site.seo.ogImage }}">
+  <meta property="og:url" content="{{ site.seo.siteUrl }}">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ site.seo.title }}">
+  <meta name="twitter:description" content="{{ site.seo.description }}">
+  <meta name="twitter:image" content="{{ site.seo.siteUrl }}{{ site.seo.ogImage }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "{{ site.footer.brand }}",
+    "description": "{{ site.seo.description }}",
+    "email": "{{ site.contact.email }}",
+    "telephone": "{{ site.contact.phone }}",
+    "url": "{{ site.seo.siteUrl }}",
+    "sameAs": [
+      "{{ site.contact.facebook }}",
+      "{{ site.contact.instagram }}",
+      "{{ site.contact.youtube }}"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  {{ content | safe }}
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+---
+layout: layout.njk
+---
+{% from "icons.njk" import icon %}
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" role="banner">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand">Jerahmeel<span>.</span></a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--ghost btn--small" href="https://wa.me/{{ site.contact.whatsappNumber }}?text={{ site.contact.whatsappMessage | urlencode }}" target="_blank" rel="noopener">
+      {{ icon("whatsapp") | safe }} Let's talk
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section id="top" class="hero">
+    <div class="hero__aurora" aria-hidden="true">
+      <span class="blob blob--blue"></span>
+      <span class="blob blob--violet"></span>
+      <span class="blob blob--cyan"></span>
+    </div>
+    <div class="hero__inner">
+      <p class="eyebrow">{{ site.hero.eyebrow }}</p>
+      <h1 class="hero__headline">{{ site.hero.headline }}</h1>
+      <p class="hero__subtext">{{ site.hero.subtext }}</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="https://wa.me/{{ site.contact.whatsappNumber }}?text={{ site.contact.whatsappMessage | urlencode }}" target="_blank" rel="noopener">
+          {{ icon("whatsapp") | safe }} {{ site.hero.primaryButtonLabel }}
+        </a>
+        <a class="btn btn--secondary" href="#portfolio">
+          {{ site.hero.secondaryButtonLabel }}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section services">
+    <p class="eyebrow eyebrow--center">What I Do</p>
+    <h2 class="section__title">Services built to make brands look premium</h2>
+    <div class="services__grid">
+      {% for s in site.services %}
+      <article class="service-card">
+        <span class="service-card__icon">{{ icon(s.icon) | safe }}</span>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="portfolio" class="section portfolio">
+    <p class="eyebrow eyebrow--center">Selected Work</p>
+    <h2 class="section__title">{{ site.portfolio.heading }}</h2>
+
+    <div class="portfolio__bento">
+      <div class="portfolio__video-card">
+        <h3>{{ site.portfolio.videoTitle }}</h3>
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/{{ site.portfolio.youtubeId }}"
+            title="{{ site.portfolio.videoTitle }}"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="portfolio__group">
+        <h3>{{ site.portfolio.photoEditing.title }}</h3>
+        <div class="portfolio__images">
+          {% for img in site.portfolio.photoEditing.images %}
+          <figure class="portfolio-image">
+            <img src="{{ img.image }}" alt="{{ img.caption }}" loading="lazy" width="600" height="450">
+            <figcaption>{{ img.caption }}</figcaption>
+          </figure>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="portfolio__group">
+        <h3>{{ site.portfolio.aiVisualDesign.title }}</h3>
+        <div class="portfolio__images">
+          {% for img in site.portfolio.aiVisualDesign.images %}
+          <figure class="portfolio-image">
+            <img src="{{ img.image }}" alt="{{ img.caption }}" loading="lazy" width="600" height="450">
+            <figcaption>{{ img.caption }}</figcaption>
+          </figure>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why">
+    <p class="eyebrow eyebrow--center">Why Choose Jerahmeel Studio</p>
+    <h2 class="section__title">A process built for brands that can't afford to look ordinary</h2>
+    <div class="why__grid">
+      {% for w in site.whyChooseUs %}
+      <article class="why-card">
+        <span class="why-card__icon">{{ icon(w.icon) | safe }}</span>
+        <h3>{{ w.title }}</h3>
+        <p>{{ w.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section testimonials">
+    <p class="eyebrow eyebrow--center">Client Words</p>
+    <h2 class="section__title">Trusted by brands that needed to move fast</h2>
+    <div class="testimonials__grid">
+      {% for t in site.testimonials %}
+      <figure class="testimonial-card">
+        <blockquote>&ldquo;{{ t.quote }}&rdquo;</blockquote>
+        <figcaption>
+          <img src="{{ t.photo }}" alt="" loading="lazy" width="48" height="48">
+          <div>
+            <span class="testimonial-card__name">{{ t.name }}</span>
+            <span class="testimonial-card__role">{{ t.role }}</span>
+          </div>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="about__inner">
+      <p class="eyebrow">About</p>
+      <h2 class="section__title">{{ site.about.heading }}</h2>
+      <p class="about__body">{{ site.about.body }}</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="contact__panel">
+      <p class="eyebrow">Get In Touch</p>
+      <h2 class="section__title">Let's build something premium together</h2>
+      <div class="contact__grid">
+        <a class="contact__item" href="tel:{{ site.contact.phone }}">
+          {{ icon("phone") | safe }}
+          <span>{{ site.contact.phone }}</span>
+        </a>
+        <a class="contact__item" href="mailto:{{ site.contact.email }}">
+          {{ icon("mail") | safe }}
+          <span>{{ site.contact.email }}</span>
+        </a>
+        <a class="contact__item" href="https://wa.me/{{ site.contact.whatsappNumber }}?text={{ site.contact.whatsappMessage | urlencode }}" target="_blank" rel="noopener">
+          {{ icon("whatsapp") | safe }}
+          <span>WhatsApp</span>
+        </a>
+      </div>
+      <div class="contact__socials" aria-label="Social media links">
+        <a href="{{ site.contact.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">{{ icon("facebook") | safe }}</a>
+        <a href="{{ site.contact.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">{{ icon("instagram") | safe }}</a>
+        <a href="{{ site.contact.youtube }}" target="_blank" rel="noopener" aria-label="YouTube">{{ icon("video") | safe }}</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>
+      <p class="site-footer__brand">{{ site.footer.brand }}</p>
+      <p class="site-footer__tagline">{{ site.footer.tagline }}</p>
+    </div>
+    <div class="site-footer__socials">
+      <a href="{{ site.contact.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">{{ icon("facebook") | safe }}</a>
+      <a href="{{ site.contact.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">{{ icon("instagram") | safe }}</a>
+      <a href="https://wa.me/{{ site.contact.whatsappNumber }}" target="_blank" rel="noopener" aria-label="WhatsApp">{{ icon("whatsapp") | safe }}</a>
+    </div>
+    <p class="site-footer__copy">&copy; <span id="year"></span> {{ site.footer.brand }}. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="#top" class="back-to-top" aria-label="Back to top">{{ icon("arrow-up") | safe }}</a>
+
+<a class="whatsapp-fab" href="https://wa.me/{{ site.contact.whatsappNumber }}?text={{ site.contact.whatsappMessage | urlencode }}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  {{ icon("whatsapp") | safe }}
+</a>

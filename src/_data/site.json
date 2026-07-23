@@ -1,0 +1,99 @@
+{
+  "seo": {
+    "title": "Jerahmeel Studio — AI-Powered Creative Solutions for Modern Brands",
+    "description": "Jerahmeel Studio helps businesses create premium visuals, AI advertisements, and websites that turn attention into customers.",
+    "ogImage": "/images/uploads/og-cover.svg",
+    "siteUrl": "https://jerahmeelstudio.netlify.app"
+  },
+  "contact": {
+    "phone": "+234 000 000 0000",
+    "email": "jerahmeelstudio@gmail.com",
+    "whatsappNumber": "2340000000000",
+    "whatsappMessage": "Hi Jerahmeel Studio, I'd like to talk about a project.",
+    "facebook": "https://facebook.com/jerahmeelstudio",
+    "instagram": "https://instagram.com/jerahmeelstudio",
+    "youtube": "https://youtube.com/@jerahmeelstudio"
+  },
+  "hero": {
+    "eyebrow": "Jerahmeel Studio",
+    "headline": "AI-Powered Creative Solutions for Modern Brands",
+    "subtext": "We help businesses create premium visuals, advertisements, and websites that stop the scroll and turn attention into customers.",
+    "primaryButtonLabel": "Chat on WhatsApp",
+    "secondaryButtonLabel": "View My Work"
+  },
+  "services": [
+    {
+      "title": "Photo Editing",
+      "description": "Professional photo retouching, enhancement, restoration and high-end editing.",
+      "icon": "photo"
+    },
+    {
+      "title": "AI Visual Design",
+      "description": "Creative AI-generated posters, product ads, social media designs, branding visuals and marketing graphics.",
+      "icon": "spark"
+    },
+    {
+      "title": "AI Advertisement Videos",
+      "description": "Short AI-powered promotional videos for products, businesses and social media advertising.",
+      "icon": "video"
+    },
+    {
+      "title": "Website Design",
+      "description": "Modern responsive websites designed for businesses, brands and personal portfolios.",
+      "icon": "layout"
+    }
+  ],
+  "portfolio": {
+    "heading": "My Recent Work",
+    "videoTitle": "AI Advertisement Video",
+    "youtubeId": "dQw4w9WgXcQ",
+    "photoEditing": {
+      "title": "Photo Editing",
+      "images": [
+        { "image": "/images/uploads/placeholder-photo-1.svg", "caption": "Portrait retouch & color grade" },
+        { "image": "/images/uploads/placeholder-photo-2.svg", "caption": "Product photo enhancement" }
+      ]
+    },
+    "aiVisualDesign": {
+      "title": "AI Visual Design",
+      "images": [
+        { "image": "/images/uploads/placeholder-ai-1.svg", "caption": "AI-generated promotional poster" },
+        { "image": "/images/uploads/placeholder-ai-2.svg", "caption": "AI-generated social ad creative" }
+      ]
+    }
+  },
+  "whyChooseUs": [
+    { "title": "Fast Delivery", "description": "Streamlined AI-assisted workflows that keep your project moving without sacrificing quality.", "icon": "bolt" },
+    { "title": "Premium Quality", "description": "Every visual is refined by hand until it meets a premium, client-ready standard.", "icon": "gem" },
+    { "title": "Creative AI Workflow", "description": "A hybrid process pairing AI speed with human creative direction.", "icon": "brain" },
+    { "title": "Attention to Detail", "description": "Careful, considered execution on every brief — nothing shipped half-finished.", "icon": "focus" }
+  ],
+  "testimonials": [
+    {
+      "name": "Amara Chukwu",
+      "role": "Founder, Peak Form Fitness",
+      "photo": "/images/uploads/placeholder-avatar-1.svg",
+      "quote": "Jerahmeel Studio turned our brand visuals around fast, and the quality was well above what we expected for the price."
+    },
+    {
+      "name": "David Okon",
+      "role": "Owner, Taste Nation Restaurant",
+      "photo": "/images/uploads/placeholder-avatar-2.svg",
+      "quote": "Our new ad creatives brought in noticeably more orders within the first week of posting them."
+    },
+    {
+      "name": "Ifeoma Obi",
+      "role": "Marketing Lead, Nexora Tech",
+      "photo": "/images/uploads/placeholder-avatar-3.svg",
+      "quote": "Communication was smooth and every revision came back better than the last. Highly recommend."
+    }
+  ],
+  "about": {
+    "heading": "About Jerahmeel Studio",
+    "body": "Jerahmeel Studio helps brands create premium digital content through a blend of AI-driven creative tools and hands-on design craft. From photo editing and AI-generated visuals to full websites, every project is built to help businesses look sharper, feel more premium, and convert more attention into customers."
+  },
+  "footer": {
+    "brand": "Jerahmeel Studio",
+    "tagline": "AI-Powered Creative Solutions"
+  }
+}

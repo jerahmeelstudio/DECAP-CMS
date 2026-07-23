@@ -1,0 +1,122 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    files:
+      - file: "src/_data/site.json"
+        label: "Site Content"
+        name: "site"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: "Meta Description", name: "description", widget: "text" }
+              - { label: "Social Share Image", name: "ogImage", widget: "image" }
+              - { label: "Live Site URL", name: "siteUrl", widget: "string" }
+
+          - label: "Contact & Social Links"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Phone Number", name: "phone", widget: "string" }
+              - { label: "Email Address", name: "email", widget: "string" }
+              - { label: "WhatsApp Number (digits only, country code, no +)", name: "whatsappNumber", widget: "string" }
+              - { label: "Default WhatsApp Message", name: "whatsappMessage", widget: "string" }
+              - { label: "Facebook URL", name: "facebook", widget: "string" }
+              - { label: "Instagram URL", name: "instagram", widget: "string" }
+              - { label: "YouTube URL", name: "youtube", widget: "string" }
+
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small Eyebrow Text", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Subtext", name: "subtext", widget: "text" }
+              - { label: "Primary Button Label", name: "primaryButtonLabel", widget: "string" }
+              - { label: "Secondary Button Label", name: "secondaryButtonLabel", widget: "string" }
+
+          - label: "Services (exactly 4 recommended)"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options: ["photo", "spark", "video", "layout", "bolt", "gem", "brain", "focus"]
+
+          - label: "Portfolio"
+            name: "portfolio"
+            widget: "object"
+            fields:
+              - { label: "Section Heading", name: "heading", widget: "string" }
+              - { label: "Video Card Title", name: "videoTitle", widget: "string" }
+              - { label: "YouTube Video ID (the part after v= in the URL)", name: "youtubeId", widget: "string" }
+              - label: "Photo Editing Gallery"
+                name: "photoEditing"
+                widget: "object"
+                fields:
+                  - { label: "Group Title", name: "title", widget: "string" }
+                  - label: "Images (exactly 2)"
+                    name: "images"
+                    widget: "list"
+                    fields:
+                      - { label: "Image", name: "image", widget: "image" }
+                      - { label: "Caption", name: "caption", widget: "string" }
+              - label: "AI Visual Design Gallery"
+                name: "aiVisualDesign"
+                widget: "object"
+                fields:
+                  - { label: "Group Title", name: "title", widget: "string" }
+                  - label: "Images (exactly 2)"
+                    name: "images"
+                    widget: "list"
+                    fields:
+                      - { label: "Image", name: "image", widget: "image" }
+                      - { label: "Caption", name: "caption", widget: "string" }
+
+          - label: "Why Choose Us (4 cards)"
+            name: "whyChooseUs"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options: ["photo", "spark", "video", "layout", "bolt", "gem", "brain", "focus"]
+
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Client Name", name: "name", widget: "string" }
+              - { label: "Client Role / Business", name: "role", widget: "string" }
+              - { label: "Photo", name: "photo", widget: "image" }
+              - { label: "Quote", name: "quote", widget: "text" }
+
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body Text", name: "body", widget: "text" }
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Brand Name", name: "brand", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
